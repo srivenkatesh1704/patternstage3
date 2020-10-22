@@ -32,5 +32,12 @@ echo "valid"
 else
 echo "invalid"
 fi
-
+read password
+regex5="[[ ${#s} -ge 8 && "$s" == *[A-Z]* && "$s" == *[a-z]* && "$s" == *[0-9]* && "$s" == *[$&*%%^^] ]]"
+if [[ $password =~ $regex5 ]]
+then 
+echo "valid"
+else
+echo "invalid"
+fi
 
